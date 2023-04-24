@@ -73,16 +73,23 @@
           
        
 
-          <a class="nav-link nav-icon" href="https://wa.me/255653740098" data-bs-toggle="dropdown">
+          <a class="nav-link nav-icon" href="mailto  tujautujau@gmail.com" data-bs-toggle="dropdown">
             <i class="bi bi-chat-left-text"></i>
             <span class="badge bg-success badge-number"></span>
           </a><!-- End Messages Icon -->
 
-<ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
             <li class="dropdown-header">
               Send message
-              <a href="mailto:  tujautujau@gmail.com"><span class="badge rounded-pill bg-primary p-2 ms-2">Email</span></a>
-            </li>        
+              <a href="mailto  tujautujau@gmail.com"><span class="badge rounded-pill bg-primary p-2 ms-2">Email</span></a>
+            </li>
+           
+
+            
+
+          
+
+            
           
 
      
@@ -217,7 +224,7 @@
 
       
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-faq.php">
+        <a class="nav-link collapsed" href="pages-faq.html">
           <i class="bi bi-question-circle"></i>
           <span>Customer Questions</span>
         </a>
@@ -243,59 +250,99 @@
 
   </aside><!-- End Sidebar-->
 
+
+
+
+
+
+
+
+
+
+  
+
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Sales Calculations</h1>
+      <h1>Frequently Customer Questions</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item">Sales Calculations Summary</li>
-          
+          <li class="breadcrumb-item">Pages</li>
+          <li class="breadcrumb-item active">Frequently Customer Questions</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
+  
+    <section class="section faq">
+      <div class="row">
+        <div class="col-lg-6">
 
-    <section class="section">
-      
+          
+
+          <!-- F.A.Q Group 1 -->
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Customer Questions</h5>
+
+              <div class="accordion accordion-flush" id="faq-group-1">
+
+                
+
+
+
+                
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" data-bs-target="#faqsOne-5" type="button" data-bs-toggle="collapse">
+                     
+                     <p> <?php
+$host = "localhost"; //IP of your database
+$userName = "Admin"; //Username for database login
+$userPass = "Admin123"; //Password associated with the username
+$database = "shop"; //Your database name
+
+$connectQuery = mysqli_connect($host,$userName,$userPass,$database);
+
+if(mysqli_connect_errno()){
+    echo mysqli_connect_error();
+    exit();
+}else{
+    $selectQuery = "SELECT * FROM `customercomment` ORDER BY `comment` ASC";
+    $result = mysqli_query($connectQuery,$selectQuery);
+    if(mysqli_num_rows($result) > 0){
+        $result_array = array();
+        while($row = mysqli_fetch_assoc($result)){
+            array_push($result_array, $row);
+        }
+
+    }
+
+    echo json_encode($result_array);
+
+}
+?>
+</p>
+                    </button>
+                  </h2>
+                  <div id="faqsOne-5" class="accordion-collapse collapse" data-bs-parent="#faq-group-1">
+                    <div class="accordion-body">
+                     Please wait for Answer
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div><!-- End F.A.Q Group 1 -->
+
+        </div>
+
         
-      <div class="col-lg-6">
-        <div class="card">
-          <div class="card-body">
-     <p>      <b><font size=2>Total sold Products : Tsh.</font></b> </p>
-<p>      <b><font size=2>Total Unsold Products : Tsh. </font></b> </p>
 
-            <!-- Polar Area Chart -->
-            <canvas id="polarAreaChart" style="max-height: 400px;"></canvas>
-            <script>
-              document.addEventListener("DOMContentLoaded", () => {
-                new Chart(document.querySelector('#polarAreaChart'), {
-                  type: 'polarArea',
-                  data: {
-                    labels: [
-                      'Retail Sales',
-                      'Wholesale',
-                      
-                    ],
-                    datasets: [{
-                      label: 'My First Dataset',
-                      data: [11, 16, 7, 3, 14],
-                      backgroundColor: [
-                        'rgb(255, 99, 132)',
-                        'rgb(75, 192, 192)',
-                        'rgb(255, 205, 86)',
-                        'rgb(201, 203, 207)',
-                        'rgb(54, 162, 235)'
-                      ]
-                    }]
-                  }
-                });
-              });
-            </script>
-            <!-- End Polar Area Chart -->
+        </div>
 
-      
-
+      </div>
     </section>
 
   </main><!-- End #main -->
