@@ -183,18 +183,18 @@
           <i class="bi bi-bar-chart"></i><span>Sales Report</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="cyber.pdf">
+        <li>
+            <a href="https://tujautujaudrinks.com:2083/">
               <i class="bi bi-circle"></i><span>Retail Sales Report</span>
             </a>
           </li>
           <li>
-            <a href="cyber.pdf">
+            <a href="https://tujautujaudrinks.com:2083/">
               <i class="bi bi-circle"></i><span>Wholesales Report</span>
             </a>
           </li>
           <li>
-            <a href="cyber.pdf">
+            <a href="https://tujautujaudrinks.com:2083/">
               <i class="bi bi-circle"></i><span>Print Report</span>
             </a>
           </li>
@@ -207,12 +207,12 @@
         </a>
         <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="tables-general.html">
+            <a href="tables-general.php">
               <i class="bi bi-circle"></i><span>Retail Customers</span>
             </a>
           </li>
           <li>
-            <a href="tables-general.html">
+            <a href="tables-general.php">
               <i class="bi bi-circle"></i><span>Wholesales Customers</span>
             </a>
           </li>

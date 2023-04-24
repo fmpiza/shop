@@ -437,17 +437,17 @@ PE html>
         </a>
         <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="cyber.pdf">
+            <a href="https://tujautujaudrinks.com:2083/">
               <i class="bi bi-circle"></i><span>Retail Sales Report</span>
             </a>
           </li>
           <li>
-            <a href="cyber.pdf">
+            <a href="https://tujautujaudrinks.com:2083/">
               <i class="bi bi-circle"></i><span>Wholesales Report</span>
             </a>
           </li>
           <li>
-            <a href="cyber.pdf">
+            <a href="https://tujautujaudrinks.com:2083/">
               <i class="bi bi-circle"></i><span>Print Report</span>
             </a>
           </li>
