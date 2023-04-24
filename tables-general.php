@@ -299,7 +299,7 @@ PE html>
     <div class="d-flex align-items-center justify-content-between">
       <a href="index1.html" class="logo d-flex align-items-center">
        
-        <span class="d-none d-lg-block"><font size=3>Tujau Drinks & Liquor Store</font></span><a href="index.html"><button class="btn btn-dark">Logout</button></a>
+        <span class="d-none d-lg-block"><font size=3>Tujau Tujau Drinks & Liquor Store</font></span><a href="index.html"><button class="btn btn-dark">Logout</button></a>
         
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -326,7 +326,7 @@ PE html>
           
        
 
-          <a class="nav-link nav-icon" href="https://wa.me/255653740098" data-bs-toggle="dropdown">
+          <a class="nav-link nav-icon" href="mailto  tujautujau@gmail.com" data-bs-toggle="dropdown">
             <i class="bi bi-chat-left-text"></i>
             <span class="badge bg-success badge-number"></span>
           </a><!-- End Messages Icon -->
@@ -334,7 +334,7 @@ PE html>
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
             <li class="dropdown-header">
               Send message
-              <a href="https://wa.me/255653740098"><span class="badge rounded-pill bg-primary p-2 ms-2">Whatsapp</span></a>
+              <a href="mailto  tujautujau@gmail.com"><span class="badge rounded-pill bg-primary p-2 ms-2">Email</span></a>
             </li>
            
 
@@ -525,9 +525,9 @@ PE html>
 <p>
        <center> <?php
 $host = "localhost"; //IP of your database
-$userName = "laoziml_monica"; //Username for database login
-$userPass = "*88Zamzamfridolin0683168429"; //Password associated with the username
-$database = "laoziml_booking"; //Your database name
+$userName = "Admin"; //Username for database login
+$userPass = "Admin123"; //Password associated with the username
+$database = "shop"; //Your database name
 
 $connectQuery = mysqli_connect($host,$userName,$userPass,$database);
 
@@ -535,7 +535,7 @@ if(mysqli_connect_errno()){
     echo mysqli_connect_error();
     exit();
 }else{
-    $selectQuery = "SELECT * FROM `reviewpost` ORDER BY `name` ASC";
+    $selectQuery = "SELECT * FROM `customerdata` ORDER BY `name` ASC";
     $result = mysqli_query($connectQuery,$selectQuery);
     if(mysqli_num_rows($result) > 0){
         $result_array = array();
@@ -550,7 +550,7 @@ if(mysqli_connect_errno()){
 }
 ?></center>
 </p>
-<button class="btn btn-success fw-bolder fs-8"><a href="customer.html"><font color="white" size=2>CALCULATE TOTAL</font></i></a></button></p>
+<button class="btn btn-success fw-bolder fs-8"><a href="total.html"><font color="white" size=2>CALCULATE TOTAL</font></i></a></button></p>
 <p>
   <p>
     <center><b><font size=2>TOTAL =  <?php
@@ -591,7 +591,7 @@ if(mysqli_connect_errno()){
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">2023
-      &copy; Copyright <strong><span>Tujau Drinks & Liquor Store</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>Tujau Tujau Drinks & Liquor Store</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->

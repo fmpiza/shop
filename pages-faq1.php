@@ -73,7 +73,7 @@
           
        
 
-          <a class="nav-link nav-icon" href="https://wa.me/255653740098" data-bs-toggle="dropdown">
+          <a class="nav-link nav-icon" href="mailto  tujautujau@gmail.com" data-bs-toggle="dropdown">
             <i class="bi bi-chat-left-text"></i>
             <span class="badge bg-success badge-number"></span>
           </a><!-- End Messages Icon -->
@@ -81,7 +81,7 @@
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
             <li class="dropdown-header">
               Send message
-              <a href="mailto:  tujautujau@gmail.com"><span class="badge rounded-pill bg-primary p-2 ms-2">Email</span></a>
+              <a href="mailto  tujautujau@gmail.com"><span class="badge rounded-pill bg-primary p-2 ms-2">Email</span></a>
             </li>
            
 
@@ -207,7 +207,7 @@
         </a>
         <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-           <a href="tables-general.php">
+            <a href="tables-general.php">
               <i class="bi bi-circle"></i><span>Retail Customers</span>
             </a>
           </li>
@@ -223,13 +223,12 @@
       <li class="nav-heading">Pages</li>
 
       
-     <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-faq.php">
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="pages-faq.html">
           <i class="bi bi-question-circle"></i>
           <span>Customer Questions</span>
         </a>
       </li><!-- End F.A.Q Page Nav -->
-
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-contact.html">
@@ -251,95 +250,99 @@
 
   </aside><!-- End Sidebar-->
 
+
+
+
+
+
+
+
+
+
+  
+
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Contact</h1>
+      <h1>Frequently Customer Questions</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
           <li class="breadcrumb-item">Pages</li>
-          <li class="breadcrumb-item active">Contact</li>
+          <li class="breadcrumb-item active">Frequently Customer Questions</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
+  
+    <section class="section faq">
+      <div class="row">
+        <div class="col-lg-6">
 
-    <section class="section contact">
+          
 
-      <div class="row gy-4">
+          <!-- F.A.Q Group 1 -->
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Customer Questions</h5>
 
-        <div class="col-xl-6">
+              <div class="accordion accordion-flush" id="faq-group-1">
 
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="info-box card">
-                <i class="bi bi-geo-alt"></i>
-                <h3>Address</h3>
-                <p> Mbeya, TANZANIA</p>
+                
+
+
+
+                
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" data-bs-target="#faqsOne-5" type="button" data-bs-toggle="collapse">
+                     
+                     <p> <?php
+$host = "localhost"; //IP of your database
+$userName = "Admin"; //Username for database login
+$userPass = "Admin123"; //Password associated with the username
+$database = "shop"; //Your database name
+
+$connectQuery = mysqli_connect($host,$userName,$userPass,$database);
+
+if(mysqli_connect_errno()){
+    echo mysqli_connect_error();
+    exit();
+}else{
+    $selectQuery = "SELECT * FROM `customercomment` ORDER BY `comment` ASC";
+    $result = mysqli_query($connectQuery,$selectQuery);
+    if(mysqli_num_rows($result) > 0){
+        $result_array = array();
+        while($row = mysqli_fetch_assoc($result)){
+            array_push($result_array, $row);
+        }
+
+    }
+
+    echo json_encode($result_array);
+
+}
+?>
+</p>
+                    </button>
+                  </h2>
+                  <div id="faqsOne-5" class="accordion-collapse collapse" data-bs-parent="#faq-group-1">
+                    <div class="accordion-body">
+                     Please wait for Answer
+                    </div>
+                  </div>
+                </div>
               </div>
+
             </div>
-            <div class="col-lg-6">
-              <div class="info-box card">
-                <i class="bi bi-telephone"></i>
-                <h3>Call Us</h3>
-                <p>+255 714 371 997<br>+255 655 888 872</p>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="info-box card">
-                <i class="bi bi-envelope"></i>
-                <h3>Email Us</h3>
-                <p>www@gmail.com</p>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="info-box card">
-                <i class="bi bi-clock"></i>
-                <h3>Open Hours</h3>
-                <p>Monday - Friday<br>8:00AM - 10:00PM</p>
-              </div>
-            </div>
-          </div>
+          </div><!-- End F.A.Q Group 1 -->
 
         </div>
 
-        <div class="col-xl-6">
-          <div class="card p-4">
-            <form action="forms/contact.php" method="post" class="php-email-form">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div>
+        
 
         </div>
 
       </div>
-
     </section>
 
   </main><!-- End #main -->
